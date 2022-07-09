@@ -1,0 +1,10 @@
+---
+- name: Installing the packages
+  hosts: all
+  become: true
+  tasks:
+   - name: install package
+     yum:
+      name: "{{a}}"
+      state: "{{b}}"
+      update_cache: "{{c}}"

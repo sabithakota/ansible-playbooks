@@ -1,0 +1,14 @@
+---
+- name: install any packages
+  hosts: all
+  become: true
+  vars:
+   a: nginx
+   b: latest
+   c: yes
+  tasks:
+   - name: install package
+     yum:
+      name: "{{a}}"
+      state: "{{b}}"
+      update_cache: "{{c}}"

@@ -1,0 +1,19 @@
+---
+- name: installing the software
+  hosts: all
+  become: true
+  tasks:
+   - name: Install nginx
+     yum:
+      name: nginx
+      state: present
+      update_cache: yes
+   - name: start the service
+     service:
+      name: nginx
+      state: started
+   - name: edit the content of homepage
+     copy:
+      dest: /usr/share/nginx/html/index.html
+      content: "sabitha homepage"
+      remote_src: yes

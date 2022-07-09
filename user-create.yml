@@ -1,0 +1,14 @@
+---
+- name: Creating users
+  hosts: all
+  become: true
+  vars_files:
+   - user-vars
+
+  tasks:
+   - name: creating user
+     user:
+      name: "{{a}}"
+      password: "{{b}}"
+      home: "{{c}}"
+      uid: "{{d}}"

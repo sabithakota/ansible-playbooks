@@ -1,0 +1,13 @@
+---
+- name: Installing packages
+  hosts: all
+  become: true
+  vars_files:
+   - package-vars
+ 
+  tasks:
+   - name: Install nginx
+     yum:
+      name: "{{a}}"
+      state: "{{b}}"
+      update_cache: "{{c}}"
