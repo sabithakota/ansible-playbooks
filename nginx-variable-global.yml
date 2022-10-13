@@ -1,5 +1,5 @@
 ---
-- name: Installing the packages
+- name: Installing the package
   hosts: all
   become: true
   tasks:
