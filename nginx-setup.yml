@@ -1,5 +1,5 @@
 ---
-- name: installing the software
+- name: installing the softwares
   hosts: all
   become: true
   tasks:
